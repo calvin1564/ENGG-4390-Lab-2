@@ -46,7 +46,8 @@ void create_file(){
 }
 
 void record_data(long timestamp, float AX, float AY, float AZ, float RX,
-float RY, float RZ, float temperature){
+float RY, float RZ, float temperature, float humidity, float altitude,
+float pressure){
   /*
   Inspect and run this code. What does it do and why?
   */
@@ -72,6 +73,12 @@ float RY, float RZ, float temperature){
     data_file.print(RZ);
     data_file.write(',');
     data_file.print(temperature);
+    data_file.write(',');
+    data_file.print(humidity);
+    data_file.write(',');
+    data_file.print(altitude);
+    data_file.write(',');
+    data_file.print(pressure);    
     data_file.println();
 
   }
