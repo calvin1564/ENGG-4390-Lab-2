@@ -12,7 +12,7 @@ void setup(){
   Wire.begin();
   Serial.println("Testing Sensor Connections");
 
-  if(ATMOSPHERIC_SENSOR.beginI2C() != 0){
+  if(ATMOSPHERIC_SENSOR.beginI2C() != 1){
     Serial.println("Error connecting to Atmospheric Sensor via i2c, check connections");
   }
   else{
@@ -25,7 +25,7 @@ void setup(){
   else{
     Serial.println("IMU Available!");
   }
-  
+
 }
 
 void loop(){}
